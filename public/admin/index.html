@@ -51,9 +51,9 @@
             <div class="card">
                 <div class="card-block">
                         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
-                                <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
-                                <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+                                <a class="nav-link active" id="v-pills-articles-tab" data-toggle="pill" href="#v-pills-articles" role="tab" aria-controls="v-pills-articles" aria-selected="true">Articles</a>
+                                <a class="nav-link" id="v-pills-mails-tab" data-toggle="pill" href="#v-pills-mails" role="tab" aria-controls="v-pills-" aria-selected="false">mails</a>
+                                <a class="nav-link" id="v-pills-callback-tab" data-toggle="pill" href="#v-pills-callback" role="tab" aria-controls="v-pills-callback" aria-selected="false">Callback</a>
  
                               </div>
 
@@ -64,37 +64,43 @@
             <div class="card">
                 <div class="card-block">
                         <div class="tab-content" id="v-pills-tabContent">
-                                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                                    <button class="btn btn-primary">Add post</button>
-                                  <div class="article">
-                                      <article class="d-flex justify-content-between align-item-center article-inline">
-                                          <div class="id w5">1</div>
-                                          <div class="name w30">Eiffel tower</div>
-                                          <div class="date w30"> 2012</div>
-                                          <div class="country w20"> france</div>
-                                          <div class="edit w10"><button class="btn btn-link">Edit</button></div>
-                                          <div class="remove w5"><button class="btn btn-link">delete</button></div>
-                                      </article>
-                                      <article class="d-flex justify-content-between align-item-center article-inline">
-                                            <div class="id">1</div>
-                                            <div class="name">Eiffel tower</div>
-                                            <div class="date"> 2012</div>
-                                            <div class="country"> france</div>
-                                            <div class="edit"><button class="btn btn-link">Edit</button></div>
-                                            <div class="remove"><button class="btn btn-link">delete</button></div>
-                                        </article>
-                                        <article class="d-flex justify-content-between align-item-center article-inline">
-                                                <div class="id">1</div>
-                                                <div class="name">Eiffel tower</div>
-                                                <div class="date"> 2012</div>
-                                                <div class="country"> france</div>
-                                                <div class="edit"><button class="btn btn-link">Edit</button></div>
-                                                <div class="remove"><button class="btn btn-link">delete</button></div>
-                                            </article>
+                                <div class="tab-pane fade show active " id="v-pills-articles" role="tabpanel" aria-labelledby="v-pills-articles-tab">
+                                    <button class="btn btn-primary create-post-btn">Add post</button>
+                                  <div class="articles">
+                                    
+                        
                                   </div>
                                 </div>
-                                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">Mails Content</div>
-                                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">Callback Request Content</div>
+                                <div class="tab-pane fade" id="v-pills-mails" role="tabpanel" aria-labelledby="v-pills-mails-tab">Mails Content</div>
+                                <div class="tab-pane fade" id="v-pills-callback" role="tabpanel" aria-labelledby="v-pills-callback-tab">Callback Request Content</div>
+                                <div class="tab-pane fade " id="v-pills-create-post" role="tabpanel" aria-labelledby="v-pills-create-post-tab">
+                                        <h2>Create post</h2>
+                                </div>
+        
+                                <form class="create-post-form">
+
+                                        <div class="form-group">
+                                                <label for="create-title">Title</label>
+                                                <input type="text" class="form-control" id="create-title" placeholder="Title">
+                                              </div>
+
+                                        <div class="form-group">
+                                                <label for="create-country">Country</label>
+                                                <input type="text" class="form-control" id="create-country" placeholder="Country">
+                                              </div>
+
+                                        <div class="form-group">
+                                                <label for="create-image-url">Image</label>
+                                                <input type="text" class="form-control" id="create-image-url" placeholder="URL">
+                                                <P>or</P>
+                                                <input type="file" class="form-control-file form-control" id="create-image-file">
+                                              </div>
+                                              <div class="form-group">
+                                                    <label for="create-text">Text</label>
+                                                    <textarea class="form-control" id="create-text" rows="5"></textarea>
+                                                  </div>
+                                                  <button class="btn btn-primary">Create Post</button>
+                                </form>
           
                               </div>
 
@@ -107,10 +113,11 @@
 
     </main>
 
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="/js/posts.js"></script>
+<script src="js/create-post.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
