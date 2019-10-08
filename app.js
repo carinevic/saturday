@@ -2,11 +2,13 @@ let express = require('express')
 let app = express()
 let mongoose = require('mongoose');
 let multer = require('multer');
+let cookieParser = require('cookie-parser');
 let postsRouter = require('./routes/posts');
 let callbackRequestsRouter = require('./routes/callback-requests');
 let emailsRouter = require('./routes/emails');
 let usersRouter = require('./routes/users')
 let Post = require('./models/posts').Post;
+let auth = require('./controllers/auth');
 
 
 app.set('view engine', 'ejs');
@@ -20,6 +22,7 @@ let imageStorage = multer.diskStorage({
 
 app.use(multer({storage: imageStorage}).single('imageFile'));
 app.use(express.static('public'));
+app.use(cookieParser())
 
 
 app.use('/posts', postsRouter);
@@ -41,9 +44,18 @@ app.get('/sight',async(req,resp) =>{
 
 })
 
+app.get('/admin', (req,resp) =>{
+    let token = req.cookies['auth_token'];
+    if(token && auth.checkToken(token)){
+    resp.render('admin');
+    }else{
+        resp.redirect('/login');
+    }
+})
 
-
-
+app.get('/login', (req,resp) =>{
+    resp.render('login')
+})
 app.listen(3000,()=>{
 
 })
