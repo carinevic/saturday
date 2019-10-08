@@ -10,16 +10,14 @@
     <title>city</title>
 </head>
 <body>
-
     <header>
-        <div class ="navbar"> 
+       
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            
+              <div class ="container"> 
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a class="navbar-brand" href="#">let's Travelr</a>
-                  
+                    <a class="navbar-brand" href="#">The more you Know</a>
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
@@ -35,13 +33,14 @@
                                 <a class="nav-link" href="/admin">Admin Page</a>
                               </li>
                       </ul>
-                      <form class="form-inline my-2 my-lg-0">
+                      <form class="form-inline my-2 my-lg-0 call-me-form">
                         <input class="form-control mr-sm-2" type="search" placeholder="phone number" aria-label="Search">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">call me</button>
                       </form>
                     </div>
+                   </div>
                   </nav>
-                </div>
+      
     </header>
     <!--        main page  -->
     <main>
@@ -56,21 +55,21 @@
                                           </ol>
                                           <div class="carousel-inner">
                                             <div class="carousel-item active">
-                                              <img src="images/slider-1.jpg" class="d-block w-100" alt="First-slider">
+                                              <img class="d-block w-100" src="images/slider-1.jpg"  alt="First-slider">
                                               <div class="carousel-caption d-none d-md-block">
                                                 <h5>Golden Gate Bridge</h5>
                                                 <p>San Francisco, U.S.</p>
                                               </div>
                                             </div>
                                             <div class="carousel-item">
-                                              <img src="images//slider-2.jpg" class="d-block w-100" alt="Second-slider">
+                                              <img class="d-block w-100" src="images//slider-2.jpg"  alt="Second-slider">
                                               <div class="carousel-caption d-none d-md-block">
                                                 <h5>Niagara Falls</h5>
                                                 <p>Border of Ontario, Canada, and New York, United States</p>
                                               </div>
                                             </div>
                                             <div class="carousel-item">
-                                              <img src="images/slider-3.jpg" class="d-block w-100" alt="Third-slider">
+                                              <img class="d-block w-100" src="images/slider-3.jpg"  alt="Third-slider">
                                               <div class="carousel-caption d-none d-md-block">
                                                 <h5>Stonehenge</h5>
                                                 <p>Wiltshire, England.</p>
@@ -85,18 +84,15 @@
                                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                             <span class="sr-only">Next</span>
                                           </a>
-                                        </div>
+                                   
                                       </div>
                                       <!--cards-->
-                                      <div class="row mt-20 articles">
-                                       
-                              
+                                      <div class="row mt-20 articles"> 
                                     </div>
-                                    <!--model block-->
                                     
     </main>
     <!--modela block-->
-    <div class="modal" tabindex="-1" role="dialog">
+    <div class="modal" tabindex="-1" role="dialog" id="myModal">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -106,40 +102,37 @@
               </button>
             </div>
             <div class="modal-body">
-                <form>
+              <form class="email-request-form">
                     <div class="form-group">
-                      <label for="exampleFormControlInput1">your name</label>
-                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                      <label for="name">Your name</label>
+                      <input type="text" class="form-control" id="name" placeholder="Name">
                     </div>
-                  
                         <div class="form-group">
-                          <label for="exampleFormControlInput1">phone number</label>
-                          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                          <form>
+                          <label for="email">Email</label>
+                          <input type="text" class="form-control" id="email" placeholder="Email">
+                        </div>
                               <div class="form-group">
-                                <label for="exampleFormControlInput1">Email address</label>
-                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                              </div>
-                              <div class="form-group">
-                                  <label for="exampleFormControlTextarea1">message</label>
+                                <label for="message">Messages</label>
                                   <textarea class="form-control" id="message" rows="3"></textarea>
                                 </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Save changes</button>
-              <button type="button" class="btn btn-primary">close</button>
-            </div>
-          </div>
-        </div>
-      </div>
+                                <input type="submit" class="btn btn-primary" data-toggle="modal" data-target="myModal">
+                                </form>
+                             </div>
+                           </div>
+                          </div>
+                        </div>
+
     <footer class="bg-light">
     <div class="container">
-
-    </div>
-<div class="modal data-toggle="modal" data-target="#exampleModal"></div>
-      <div class="col-6-d-flex">
-
+      <div class="row">
+        <div class="col-6-d-flex align-items-center">
+          <p class="copy">@2019, All Rights Reserved</p>
+        </div>
+        <div class="col-6-d-flex justify-content-end align-items-center">
+          <button class="btn btn-primary" data-toggle="modal" data-target="#modal">Contact us</button>
+        </div>
       </div>
+ </div>
     </footer>
  
 
@@ -147,6 +140,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/posts.js"></script>
+<script src="js/emails.js"></script>
 <script  src="js/main.js"></script>
 
 </body>

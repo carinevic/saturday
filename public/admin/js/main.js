@@ -7,8 +7,9 @@ let addPostBtn = document.querySelector('.create-post-btn');
 // }
 
 document.addEventListener('DOMContentLoaded', async function(){
-    addPost();
+    addPosts();
     addCallbackRequests();
+    addEmails();
 })
 addPostBtn.addEventListener('click',function(){
     let articlesTab = document.getElementById('v-pills-articles');
@@ -57,3 +58,24 @@ requestsBlock.insertAdjacentHTML('beforeend', requestHTML);
 
 })
 }
+async function addEmails(){
+    let requests = await getEmails();
+let requestsBlock = document.querySelector('#v-pills-mails');
+requestsBlock.innerHTML = '';
+let i = 1;
+requests.forEach((request) =>{
+    let requestHTML = ` 
+    <article class="d-flex justify-content-between align-item-center article-inline">
+                                            <div class="num w5">${i++}</div>
+                                            <input class="id" type="hidden" value="${request.id}">
+                                            <div class="name w30>${request.name}</div>
+                                            <div class="email w30">${request.emails}</div>
+                                            <div class="date w30"> ${request.date}</div>
+                                            <div class="remove w5"><button class="btn btn-link btn-remove">delete</button></div>
+                                            <div class="text w100">${request.text}</div>
+                                        </article>`;
+requestsBlock.insertAdjacentHTML('beforeend', requestHTML);
+
+})
+}
+
