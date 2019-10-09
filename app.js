@@ -31,9 +31,9 @@ app.use('/emails',emailsRouter);
 app.use('/users', usersRouter);
 
 
-app.get('/sight',async(req,resp) =>{
+app.get('/sight', async(req,resp) =>{
     let id = req.query.id;
-    let post =  await Post.findOne({id: id})
+    let post =  await Post.findOne({id: id});
     resp.render('sight',{
         title: post.title,
         imageURL: post.imageURL,

@@ -16,7 +16,7 @@ footer.container,footer.row{
     border-radius: 10px;
 
 }
-.page-wrapper h1{
+.page-wrapper h1 {
     text-align: center;
     margin-bottom: 20px;
 
@@ -24,7 +24,7 @@ footer.container,footer.row{
 .card-block{
     padding: 15px;
 }
-.w30{
+.w60{
     width: 60%;
 }
 .w100{
@@ -42,7 +42,7 @@ footer.container,footer.row{
 .w5{
     width: 5%;
 }
-.articles{
+.articles {
     margin-top: 15px;
 }
 .article-inline{
@@ -76,7 +76,7 @@ footer.container,footer.row{
     padding: 20px 15px 30px;
     box-shadow: 0 0 10px #ccc;
 }
-.login-container h1{
+.login-container h1 {
     text-align: center;
     margin-bottom: 20px;
 

@@ -6,10 +6,10 @@ function generateToken(user){
         email: user.email,
         password: user.password
     }
-    jwt.sign(payload, secret )
+    return jwt.sign(payload, secret );
 }
 function checkToken(token){
-    jwt.verify(token, secret);
+   return  jwt.verify(token, secret);
 }
 
 module.exports = { generateToken, checkToken}

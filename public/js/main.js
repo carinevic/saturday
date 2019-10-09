@@ -1,13 +1,14 @@
 // document.addEventListener("DOMContentLoaded", async function() {
 
 
-// //   async function getPosts(){
-// //     return await  fetch('http://localhost:3000/posts')
-// //     .then((response) => response.json())
-// //     .then((data) => data);
-// // }
+  async function getPosts(){
+    return await  fetch('http://localhost:3000/posts')
+    .then((response) => response.json())
+    .then((data) => data);
+}
 let callMeForm = document.querySelector('.call-me-form');
-document.addEventListener("DOMContentLoaded", async function() {
+
+document.addEventListener('DOMContentLoaded', async function() {
   let posts = await getPosts();
   let articles = document.querySelector('.articles');
   articles.innerHTML = '';
@@ -29,7 +30,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 callMeForm.addEventListener('submit', function(e){
   e.preventDefault();
   let phoneInp = callMeForm.querySelector('input');
-  fetch('http://localhost:3000/callback-requests',{
+  fetch('http://localhost:3000/callback-requests', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

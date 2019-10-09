@@ -5,7 +5,7 @@
     .then((data) => data);
 }
 
-let requestBlock = document.querySelector('#v-pills-callback');
+let requestsBlock = document.querySelector('#v-pills-callback');
 
 requestsBlock.addEventListener('click', function(e) {
     if(e.target.classList.contains('btn-remove')){

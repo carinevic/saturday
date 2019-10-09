@@ -8,8 +8,8 @@ emailRequestForm.addEventListener('submit', function(e){
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            name: document.querySelector('#name').nodeValue,
-            email: document.querySelector('#email').nodeValue,
+            name: document.querySelector('#name').value,
+            email: document.querySelector('#email').value,
             text: document.querySelector('#message').value
         })
     }).then((resp) => resp.text()).then((data) => console.log(data));

@@ -16,7 +16,7 @@ signInForm.addEventListener('submit', function(e){
        if(resp.status === 400){
            return new Error();
        } 
-       resp.json();
+      return resp.json();
     }).then((data ) =>{
         window.location.href = data.redirectURL;
     }).catch(() => alert('Wrong email or password'))
@@ -31,7 +31,7 @@ registerForm.addEventListener('submit', function(e){
     if(password !== rePassword){
         return;
     }
-    fetch('http://localhost:3000/users/register',{
+    fetch('http://localhost:3000/users/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

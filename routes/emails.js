@@ -6,7 +6,7 @@ let router = express.Router();
 let authMiddleware = require('../middleware/auth');
 
 
-router.get('/', authMiddle, async (req,resp) =>{
+router.get('/', authMiddleware, async (req,resp) =>{
     resp.send(await Email.find());
 });
 
@@ -16,7 +16,7 @@ router.post('/', async (req,resp) =>{
         id: uniqid(),
       name: reqBody.name,
       text: reqBody.text,
-      email:reqBody.email,
+      email: reqBody.email,
         date: new Date()
     })
     await newEmail.save()

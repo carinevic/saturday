@@ -1,4 +1,4 @@
-let auth = require('../controllers/auth')
+let auth = require('../controllers/auth');
 
 function checkAuth(req, resp, next){
 let token = req.cookies['auth_token'];

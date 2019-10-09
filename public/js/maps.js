@@ -1,6 +1,6 @@
 let platform = new H.service.Platform({
-    'app_id': '{SYdp1Y4JH9YKshr5OoEa}',
-    'app_code': '{1438E1rmSGDVzyaxisFUXg}'
+    'app_id': 'SYdp1Y4JH9YKshr5OoEa',
+    'app_code': '1438E1rmSGDVzyaxisFUXg'
   });
 
  
@@ -8,7 +8,7 @@ let platform = new H.service.Platform({
 
 function landmarkGeocode(){
     let title = document.querySelector('h1').textContent;
-    let geocoder = platform.getGeocodingServices(),
+    var geocoder = platform.getGeocodingServices(),
     landmarkGeocodingParameters = {
         searchText: title,
         jsonattributes: 1

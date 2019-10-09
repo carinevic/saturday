@@ -28,7 +28,7 @@ articles.innerHTML = '';
 let i = 1;
 posts.forEach((post) =>{
     let postHTML = ` 
-    <article class="d-flex justify-content-between align-item-center article-inline">
+    <article class="d-flex justify-content-between align-items-center article-inline">
                                             <div class="num w5">${i++}</div>
                                             <input class="id" type="hidden" value="${post.id}">
                                             <div class="name w30">${post.title}</div>
@@ -48,7 +48,7 @@ requestsBlock.innerHTML = '';
 let i = 1;
 requests.forEach((request) =>{
     let requestHTML = ` 
-    <article class="d-flex justify-content-between align-item-center article-inline">
+    <article class="d-flex justify-content-between align-items-center article-inline">
                                             <div class="num w5">${i++}</div>
                                             <input class="id" type="hidden" value="${request.id}">
                                             <div class="name w60">${request.phoneNumber}</div>
@@ -64,13 +64,13 @@ async function addEmails(){
 let requestsBlock = document.querySelector('#v-pills-mails');
 requestsBlock.innerHTML = '';
 let i = 1;
-requests.forEach((request) =>{
+requests.forEach((request) => {
     let requestHTML = ` 
-    <article class="d-flex justify-content-between align-item-center article-inline">
+    <article class="d-flex justify-content-between align-items-center article-inline">
                                             <div class="num w5">${i++}</div>
                                             <input class="id" type="hidden" value="${request.id}">
-                                            <div class="name w30>${request.name}</div>
-                                            <div class="email w30">${request.emails}</div>
+                                            <div class="name w30">${request.name}</div>
+                                            <div class="email w30">${request.email}</div>
                                             <div class="date w30"> ${request.date}</div>
                                             <div class="remove w5"><button class="btn btn-link btn-remove">delete</button></div>
                                             <div class="text w100">${request.text}</div>
