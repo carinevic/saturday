@@ -21,7 +21,7 @@ router.post('/', authMiddleware, async(req,resp) => {
     if(reqBody.imageURL){
         imgPath = reqBody.imageURL;
     }else{
-        imgPath = req.file.path.substring(req.file.path.indexOf('/'), req.file.path.length);
+        imgPath = req.file.path.substring(req.file.path.indexOf('/'),req.file.path.length);
     }
     let newPost = new Post({
         id: uniqid(),
@@ -30,7 +30,7 @@ router.post('/', authMiddleware, async(req,resp) => {
         description: reqBody.description,
         text: reqBody.text,
         country: reqBody.country,
-        imageURL: imgPath
+        imageURL: imagePath
     })
    await newPost.save();
     resp.send('Created');
