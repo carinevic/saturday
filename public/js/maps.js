@@ -3,12 +3,10 @@ let platform = new H.service.Platform({
     'app_code': '1438E1rmSGDVzyaxisFUXg'
   });
 
- 
-
 
 function landmarkGeocode(){
     let title = document.querySelector('h1').textContent;
-    var geocoder = platform.getGeocodingServices(),
+    let  geocoder = platform.getGeocodingService(),
     landmarkGeocodingParameters = {
         searchText: title,
         jsonattributes: 1
@@ -20,7 +18,28 @@ function landmarkGeocode(){
     );
 }
 function showMap(result){
-    let location = result.response.view[0].result[0].place.locations[0].displayPosition;
+
+    let location = {}
+
+    if(result) {
+      if(result.response.view) {
+        let view = result.response.view[0]
+        if(view.result) {
+          let result = view.result[0]
+          if(result.location) {
+             location = result.location.displayPosition
+          } else if(result.place) {
+             if(result.place.locations) {
+              location = result.place.locations[0].displayPosition
+             }
+              
+          }
+        }
+      }
+    }
+
+
+    //let location = result.response.view[0].result[0].location.displayPosition
     let defaultLayers = platform.createDefaultLayers();
     let map = new H.Map(
         document.querySelector('.map'),

@@ -34,6 +34,7 @@ posts.forEach((post) =>{
                                             <div class="name w30">${post.title}</div>
                                             <div class="date w30"> ${post.date}</div>
                                             <div class="country w20">${post.country}</div>
+                                         
                                             <div class="edit w10"><button class="btn btn-link btn-edit">Edit</button></div>
                                             <div class="remove w5"><button class="btn btn-link btn-remove">delete</button></div>
                                         </article>`;

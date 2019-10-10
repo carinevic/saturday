@@ -16,6 +16,7 @@ router.get('/:id', async (req,resp) =>{
 })
 
 router.post('/', authMiddleware, async(req,resp) => { 
+    console.log(req.body)
     let reqBody = req.body;
     let imgPath;
     if(reqBody.imageURL){
@@ -30,7 +31,7 @@ router.post('/', authMiddleware, async(req,resp) => {
         description: reqBody.description,
         text: reqBody.text,
         country: reqBody.country,
-        imageURL: imagePath
+        imageURL: imgPath
     })
    await newPost.save();
     resp.send('Created');
